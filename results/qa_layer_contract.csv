@@ -1,0 +1,4 @@
+step,rows_in,rows_out,delta
+raw -> stg: transactions,2595732,2595732,0
+stg -> core: fact_sale,2595732,2595732,0
+core -> mart: revenue ties,7447281,7447281,0

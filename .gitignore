@@ -1,0 +1,29 @@
+# ---------------------------------------------------------------------------
+# Dunnhumby - repository hygiene
+#
+# Commit the pipeline, the notebook and the results. Not the source data
+# (causal_data.csv alone is 664 MB) and not the rebuildable warehouse.
+# ---------------------------------------------------------------------------
+
+# Source CSVs - download "The Complete Journey" from Dunnhumby
+data/
+*.csv
+
+# The warehouse, rebuilt by the pipeline
+artifacts/*.duckdb
+artifacts/*.duckdb.wal
+
+# Local environment
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# ---------------------------------------------------------------------------
+# Explicitly COMMITTED:
+#   src/        the whole pipeline
+#   notebooks/  the executed walkthrough
+#   docs/       assumptions
+#   results/    the estimated tables, as CSV
+# ---------------------------------------------------------------------------
+!results/*.csv

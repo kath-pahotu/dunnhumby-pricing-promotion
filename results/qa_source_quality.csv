@@ -1,0 +1,6 @@
+issue,rows_affected,rows_total,treatment
+units is zero,14466,2595732,A line with no units has no unit price. Excluded.
+units above 20 (weighted or bulk),23445,2595732,Produce sold by weight. Units are not comparable. Excluded.
+paid value not positive,18850,2595732,"Returns and adjustments. Excluded from pricing, kept in spend."
+retailer discount stored POSITIVE,36,2595732,A discount that raises the price. Anomaly - see assumptions.
+base value below paid value,35,2595732,Shelf price below what was paid. Impossible. Excluded.
